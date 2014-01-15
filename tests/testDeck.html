@@ -1,0 +1,17 @@
+<!-- An example file that allows for a brief test decks. -->
+<HTML>
+    <HEAD>
+        <SCRIPT src="../js/card.js"></SCRIPT>
+        <SCRIPT src="../js/deck.js"></SCRIPT>
+        <script src="../js/jquery-1.9.1.js"></script>
+    </HEAD>
+    <BODY>
+        Test file - use console (JT).
+    </BODY>
+    <script>
+        var a = new Deck();
+        var b = a.draw();
+        var temp = a.drawMany(5);
+        $('body').append(temp.toString());
+    </script>
+</HTML>

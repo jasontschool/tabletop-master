@@ -1,0 +1,27 @@
+<!-- An example file that allows for a brief test of rolling dice. -->
+<HTML>
+    <HEAD>
+        <SCRIPT src="../js/dice.js"></SCRIPT>
+        <script src="../js/jquery-1.9.1.js"></script>
+    </HEAD>
+    <BODY>
+        Test file - use console (JT).
+    </BODY>
+    <script>
+        var temp = new Dice(3);
+
+        $("body").text("Ready for testing");
+        $('<button/>')
+            .text("Roll dice!")
+            .click(function() {
+                $("body").append(temp.roll());
+            })
+            .appendTo($("body"));
+        $('<button/>')
+            .text("Roll 3 dice!")
+            .click(function() {
+                $("body").append(temp.rollMany(3));
+            })
+            .appendTo($("body"));
+    </script>
+</HTML>
